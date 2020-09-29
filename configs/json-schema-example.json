@@ -1,0 +1,335 @@
+{
+  "type": "object",
+  "title": "Example",
+  "required": [
+    "Input"
+  ],
+  "properties": {
+    "Checkbox": {
+      "type": "boolean",
+      "description": "多选框",
+      "x-renderOptions": {
+        "component": "Checkbox",
+        "properties": {
+          "label": "请打钩"
+        }
+      }
+    },
+    "CheckboxGroup": {
+      "type": "array",
+      "description": "多选框",
+      "x-renderOptions": {
+        "component": "CheckboxGroup",
+        "data": [
+          "html",
+          "css",
+          "javascript"
+        ]
+      }
+    },
+    "Radio": {
+      "type": "string",
+      "description": "单选按钮",
+      "x-renderOptions": {
+        "component": "Radio",
+        "properties": {
+          "buttonStyle": "solid"
+        },
+        "data": [
+          "html",
+          "css",
+          "javascript"
+        ]
+      }
+    },
+    "Select": {
+      "type": "number",
+      "description": "单选框",
+      "x-renderOptions": {
+        "component": "Select",
+        "properties": {
+          "placeholder": "请选择",
+          "defaultActiveFirstOption": true
+        },
+        "data": ":getSelectData"
+      }
+    },
+    "Switch": {
+      "type": "boolean",
+      "description": "开关",
+      "x-renderOptions": {
+        "component": "Switch",
+        "properties": {
+          "checkedChildren": "开",
+          "unCheckedChildren": "关"
+        }
+      }
+    },
+    "Slider": {
+      "type": "number",
+      "description": "滑动选择",
+      "x-renderOptions": {
+        "component": "Slider",
+        "properties": {
+          "step": 0.1
+        }
+      }
+    },
+    "Input": {
+      "type": "string",
+      "description": "输入框",
+      "x-renderOptions": {
+        "component": "Input",
+        "properties": {
+          "placeholder": "请输入"
+        }
+      }
+    },
+    "Password": {
+      "type": "string",
+      "description": "输入框",
+      "x-renderOptions": {
+        "component": "Password",
+        "properties": {
+          "placeholder": "请输入"
+        }
+      }
+    },
+    "Number": {
+      "type": "number",
+      "description": "数字输入框",
+      "x-renderOptions": {
+        "component": "Number",
+        "properties": {
+          "placeholder": "请输入"
+        }
+      }
+    },
+    "AutoComplete": {
+      "type": "string",
+      "description": "带提示的输入框",
+      "x-renderOptions": {
+        "component": "AutoComplete",
+        "properties": {
+          "placeholder": "请输入",
+          "defaultActiveFirstOption": true
+        },
+        "data": [
+          "html",
+          "css",
+          "javascript"
+        ]
+      }
+    },
+    "TimePicker": {
+      "type": "string",
+      "description": "时间选择器",
+      "x-renderOptions": {
+        "component": "TimePicker",
+        "properties": {
+          "placeholder": "请选择"
+        }
+      }
+    },
+    "DatePicker": {
+      "type": "string",
+      "format": "date",
+      "description": "日期选择器",
+      "x-renderOptions": {
+        "component": "DatePicker",
+        "properties": {
+          "placeholder": "请选择"
+        }
+      }
+    },
+    "MonthPicker": {
+      "type": "string",
+      "description": "月选择器",
+      "x-renderOptions": {
+        "component": "MonthPicker",
+        "properties": {
+          "placeholder": "请选择"
+        }
+      }
+    },
+    "WeekPicker": {
+      "type": "string",
+      "description": "周选择器",
+      "x-renderOptions": {
+        "component": "WeekPicker",
+        "properties": {
+          "placeholder": "请选择"
+        }
+      }
+    },
+    "RangePicker": {
+      "type": "array",
+      "description": "日期范围选择器",
+      "x-renderOptions": {
+        "component": "RangePicker",
+        "properties": {
+          "placeholder": [
+            "起始时间",
+            "截止时间"
+          ]
+        }
+      }
+    },
+    "Cascader": {
+      "type": "array",
+      "description": "级联选择器",
+      "x-renderOptions": {
+        "component": "Cascader",
+        "properties": {
+          "placeholder": "请选择",
+          "changeOnSelect": true
+        },
+        "data": [
+          {
+            "value": "zhinan",
+            "label": "指南",
+            "children": [
+              {
+                "value": "shejiyuanze",
+                "label": "设计原则",
+                "children": [
+                  {
+                    "value": "yizhi",
+                    "label": "一致",
+                    "disabled": true
+                  },
+                  {
+                    "value": "fankui",
+                    "label": "反馈"
+                  },
+                  {
+                    "value": "xiaolv",
+                    "label": "效率"
+                  },
+                  {
+                    "value": "kekong",
+                    "label": "可控"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Transfer": {
+      "type": "array",
+      "description": "穿梭框",
+      "x-renderOptions": {
+        "component": "Transfer",
+        "data": [
+          "html",
+          "css",
+          "javascript"
+        ]
+      }
+    },
+    "Dynamic": {
+      "type": "array",
+      "description": "动态表单项",
+      "minItems": 1,
+      "x-renderOptions": {
+        "properties": {
+          "minItems": 1,
+          "maxItems": 3
+        }
+      },
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "title": "名称",
+            "x-renderOptions": {
+              "properties": {
+                "placeholder": "请填入名称",
+                "style": {
+                  "width": "200px"
+                }
+              }
+            }
+          },
+          "Email": {
+            "type": "string",
+            "title": "邮箱",
+            "format": "email",
+            "x-renderOptions": {
+              "properties": {
+                "placeholder": "请填入邮箱"
+              }
+            }
+          },
+          "URL": {
+            "type": "string",
+            "title": "网址",
+            "format": "url",
+            "x-renderOptions": {
+              "properties": {
+                "type": "url",
+                "placeholder": "请填入网址"
+              }
+            }
+          }
+        }
+      }
+    },
+    "TabularDynamic": {
+      "type": "array",
+      "description": "表格布局动态表单项(esui特有组件)",
+      "minItems": 1,
+      "x-renderOptions": {
+        "component": "TabularDynamic",
+        "properties": {
+          "minItems": 1,
+          "maxItems": 3
+        }
+      },
+      "items": {
+        "type": "object",
+        "required": [
+          "Email"
+        ],
+        "properties": {
+          "Switch": {
+            "type": "boolean",
+            "title": "启用",
+            "description": "开关",
+            "x-renderOptions": {
+              "component": "Switch",
+              "properties": {
+                "checkedChildren": "开",
+                "unCheckedChildren": "关"
+              }
+            }
+          },
+          "Email": {
+            "type": "string",
+            "title": "邮箱",
+            "format": "email",
+            "x-renderOptions": {
+              "properties": {
+                "placeholder": "email"
+              }
+            }
+          },
+          "URL": {
+            "type": "string",
+            "title": "网址",
+            "format": "url",
+            "x-renderOptions": {
+              "properties": {
+                "type": "url",
+                "placeholder": "url"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

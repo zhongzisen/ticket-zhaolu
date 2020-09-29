@@ -1,0 +1,23 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "description": "业务模块共享代码",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@atsfe/qaxd": "^1.0.0-alpha.21",
+    "@atsfe/qp-helper-vue": "^0.1.1",
+    "@bfe/bpv3-web-api": "^0.0.11",
+    "@bizcom/permission": "^0.2.1",
+    "@bizcom/table": "^1.0.0-alpha.7",
+    "axios": "^0.19.2",
+    "camelcase": "^6.0.0",
+    "events": "^3.2.0",
+    "vue": "^2.6.11",
+    "vue-i18n": "^8.20.0",
+    "vue-router": "^3.4.2"
+  }
+}
